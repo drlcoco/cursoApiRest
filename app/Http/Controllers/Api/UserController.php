@@ -40,8 +40,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $pwd = password_hash($request->password, PASSWORD_BCRYPT, ['cost', 4]);
         $user = new User();
+        $pwd = password_hash($request->password, PASSWORD_BCRYPT, ['cost', 4]);
         $user->email = $request->email;
         $user->password = $pwd;
         $user->role = $request->role;
@@ -101,9 +101,10 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $user = User::findOrFail($request->id);
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->role = $request->role;
+
+        $user->email = $user->email;
+        $user->password = $user->password;
+        $user->role = $user->role;
         $user->name = $request->name;
         $user->surname = $request->surname;
         $user->address = $request->address;
