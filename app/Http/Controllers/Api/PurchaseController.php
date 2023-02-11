@@ -55,6 +55,7 @@ class PurchaseController extends Controller
             'stock' => $purchase->stock,
             'price' => $purchase->price,
             'image' => $purchase->image,
+            'created_at' => $purchase->date,
             'userId' => $purchase->userId,
             'categoryId' => $purchase->categoryId
         ], 200);
