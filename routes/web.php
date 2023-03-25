@@ -14,11 +14,13 @@ use App\Models\User;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/usuarios', function () {
     $users = User::get();
     return response()->json($users, 200);
-});
+}); */
+
+/* Route::get('index', [SendEmailController::class, 'index']); */

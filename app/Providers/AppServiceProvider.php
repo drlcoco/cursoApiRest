@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        return "Función register appserviceprovider";
+        $this->app->singleton('data', function () {
+            return [];
+        });
     }
 
     /**
